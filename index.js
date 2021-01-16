@@ -50,6 +50,7 @@ const { help } = require('./src/help')
 const { toinmenu } = require('./src/toinmenu')
 const { menuadmin } = require('./src/menuadmin')
 const { nsfwmenu } = require('./src/nsfwmenu')
+const { menufodar } = require('./src/menufodar')
 //const { makermenu } = require('./database/menu/makermenu')
 //const { mediamenu } = require('./database/menu/mediamenu')
 //const { educationmenu } = require('./database/menu/educationmenu')
@@ -326,8 +327,8 @@ async function starts() {
 			
 			 /******END OF FUNCTIONS INPUT******/
 			switch(command) {
-				case 'help':
-				case 'menu':
+				case '':
+				case '':
 					hisil = fs.readFileSync('./assets/menuimg.jpg')
 					client.sendMessage(from, hisil, image, {quoted: mek, caption: help(prefix), text})
 					break
@@ -341,6 +342,10 @@ async function starts() {
                client.sendMessage(from, negara(prefix, sender), text, {quoted: mek})
 			   break
 			   case 'toinmenu':
+		client.sendMessage(from, menufodar(prefix, sender), text, {quoted: mek})
+				break
+				case 'help':
+				case 'menu':
 		client.sendMessage(from, toinmenu(prefix, sender), text, {quoted: mek})
 				break
 				case 'menuadmin':
