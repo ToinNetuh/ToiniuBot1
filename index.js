@@ -47,10 +47,8 @@ const _level = JSON.parse(fs.readFileSync('./src/level.json'))
 
 /******LOAD OF MENU INPUT******/
 const { help } = require('./src/help')
-const { toinmenu } = require('./src/toinmenu')
 const { menuadmin } = require('./src/menuadmin')
 const { nsfwmenu } = require('./src/nsfwmenu')
-const { menufodar } = require('./src/menufodar')
 //const { makermenu } = require('./database/menu/makermenu')
 //const { mediamenu } = require('./database/menu/mediamenu')
 //const { educationmenu } = require('./database/menu/educationmenu')
@@ -327,8 +325,8 @@ async function starts() {
 			
 			 /******END OF FUNCTIONS INPUT******/
 			switch(command) {
-				case '':
-				case '':
+				case 'help':
+				case 'menu':
 					hisil = fs.readFileSync('./assets/menuimg.jpg')
 					client.sendMessage(from, hisil, image, {quoted: mek, caption: help(prefix), text})
 					break
@@ -343,10 +341,6 @@ async function starts() {
 			   break
 			   case 'toinmenu':
 		client.sendMessage(from, menufodar(prefix, sender), text, {quoted: mek})
-				break
-				case 'help':
-				case 'menu':
-		client.sendMessage(from, toinmenu(prefix, sender), text, {quoted: mek})
 				break
 				case 'menuadmin':
 		client.sendMessage(from, menuadmin(prefix, sender), text, {quoted: mek})
