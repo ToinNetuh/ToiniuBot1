@@ -37,7 +37,7 @@ Follow The Steps Below!
 > npm start
 ```
 
-## Features
+## Novidades
 ```
 Depoix coloco
 ```
