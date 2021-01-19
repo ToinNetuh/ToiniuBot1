@@ -13,7 +13,7 @@ const help = (prefix, pushname, botname, oname) => {
     Outros Menus
     ❏${prefix}nsfwmenu
     ❏${prefix}menuadmin
-    ❏${prefix}itachimenu
+    ❏${prefix}toinmenu
   
     
   ◪ *LEVEL*
